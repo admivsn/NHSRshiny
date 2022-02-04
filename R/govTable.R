@@ -24,19 +24,19 @@
 #'   example_data <- data.frame(Months, Bikes, Cars)
 #'
 #'   ui <- fluidPage(
-#'     shinyGovstyle::header(
+#'     NHSRshiny::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::banner(
+#'       logo="NHSRshiny/images/moj_logo.png"),
+#'     NHSRshiny::banner(
 #'       inputId = "banner", type = "beta", 'This is a new service'),
-#'     shinyGovstyle::gov_layout(size = "two-thirds",
-#'     shinyGovstyle::govTable(
+#'     NHSRshiny::gov_layout(size = "two-thirds",
+#'     NHSRshiny::govTable(
 #'       "tab1", example_data, "Test", "l", num_col = c(2,3),
 #'       width_overwrite = c("one-half", "one-quarter", "one-quarter"))
 #'     ),
 #'
-#'     shinyGovstyle::footer(full = TRUE)
+#'     NHSRshiny::footer(full = TRUE)
 #'   )
 #'
 #'   server <- function(input, output, session) {}

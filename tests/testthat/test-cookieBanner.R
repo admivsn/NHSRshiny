@@ -1,6 +1,6 @@
 test_that("cookie banner works", {
 
-  cookieBannerCheck <- shinyGovstyle::cookieBanner("The best thing")
+  cookieBannerCheck <- NHSRshiny::cookieBanner("The best thing")
 
   cookieCheckChild <- cookieBannerCheck$children[[1]]
 

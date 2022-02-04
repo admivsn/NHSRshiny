@@ -31,11 +31,11 @@ This function create a notification banner
 if (interactive()) {
 
   ui <- fluidPage(
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::noti_banner(
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::noti_banner(
       inputId = "banner", title_txt = "Important", body_txt = "Example text")
   )
 

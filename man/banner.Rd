@@ -24,11 +24,11 @@ details.
 if (interactive()) {
 
   ui <- fluidPage(
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::banner(
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::banner(
       inputId = "banner", type = "beta", 'This is a new service')
   )
 

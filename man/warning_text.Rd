@@ -20,16 +20,16 @@ This function create warning text
 \examples{
 if (interactive()) {
   ui <- fluidPage(
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::warning_text(
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::gov_layout(size = "two-thirds",
+      NHSRshiny::warning_text(
         inputId = "warn1",
         text = "You can be fined up to £5,000 if you do not register.")
     ),
-    shinyGovstyle::footer(full = TRUE)
+    NHSRshiny::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}

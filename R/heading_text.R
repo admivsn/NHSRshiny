@@ -9,14 +9,14 @@
 #' @examples
 #' if (interactive()) {
 #'   ui <- fluidPage(
-#'     shinyGovstyle::header(
+#'     NHSRshiny::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::gov_layout(size = "two-thirds",
-#'       shinyGovstyle::heading_text("This is great text", "m")
+#'       logo="NHSRshiny/images/moj_logo.png"),
+#'     NHSRshiny::gov_layout(size = "two-thirds",
+#'       NHSRshiny::heading_text("This is great text", "m")
 #'     ),
-#'     shinyGovstyle::footer(full = TRUE)
+#'     NHSRshiny::footer(full = TRUE)
 #'   )
 #'
 #'   server <- function(input, output, session) {}

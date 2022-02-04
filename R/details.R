@@ -11,17 +11,17 @@
 #' @examples
 #' if (interactive()) {
 #'   ui <- fluidPage(
-#'     shinyGovstyle::header(
+#'     NHSRshiny::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::gov_layout(size = "two-thirds",
-#'       shinyGovstyle::details(
+#'       logo="NHSRshiny/images/moj_logo.png"),
+#'     NHSRshiny::gov_layout(size = "two-thirds",
+#'       NHSRshiny::details(
 #'         inputId = "help_div",
 #'         label = "Help with form",
 #'         help_text = "To complete the form you need to fill it in...")
 #'     ),
-#'     shinyGovstyle::footer(full = TRUE)
+#'     NHSRshiny::footer(full = TRUE)
 #'   )
 #'
 #'   server <- function(input, output, session) {}

@@ -1,20 +1,20 @@
-Package: shinyGovstyle
-Title: Custom Gov Style Inputs for Shiny
+Package: NHSRshiny
+Title: NHS style shiny applications
 Version: 0.0.7.9000
 Authors@R: person(
-  given = "Ross", 
-  family = "Wyatt", 
-  email = "ross.wyatt@justice.gov.uk", 
+  given = "Adam", 
+  family = "Ivison", 
+  email = "ivisonadam@gmail.com", 
   role = c("aut", "cre"))
 Description: Collection of 'shiny' application styling that are the based on 
-  the GOV.UK Design System.  See 
-  <https://design-system.service.gov.uk/components/> for details.
+  the NHS.UK frontend.  See 
+  <https://service-manual.nhs.uk/design-system/components/> for details.
 Depends: R (>= 3.1.0)
 License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.1.2
-URL: https://github.com/moj-analytical-services/shinyGovstyle
-BugReports: https://github.com/moj-analytical-services/shinyGovstyle/issues
+URL: https://github.com/admivsn/NHSRshiny
+BugReports: https://github.com/admivsn/NHSRshiny/issues
 Imports: 
     shiny (>= 0.14),
     htmltools,

@@ -50,25 +50,25 @@ if (interactive()) {
   ui <- fluidPage(
     # Required for error handling function
     shinyjs::useShinyjs(),
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::banner(
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::banner(
       inputId = "banner", type = "beta", 'This is a new service'),
-    shinyGovstyle::gov_layout(size = "two-thirds",
+    NHSRshiny::gov_layout(size = "two-thirds",
       # Simple text box
-      shinyGovstyle::text_Input(inputId = "eventId", label = "Event Name"),
+      NHSRshiny::text_Input(inputId = "eventId", label = "Event Name"),
       # Error text box
-      shinyGovstyle::text_Input(
+      NHSRshiny::text_Input(
         inputId = "eventId2",
         label = "Event Name",
         hint_label = "This can be found on the letter",
         error = TRUE),
       # Button to trigger error
-      shinyGovstyle::button_Input(inputId = "submit", label = "Submit")
+      NHSRshiny::button_Input(inputId = "submit", label = "Submit")
     ),
-    shinyGovstyle::footer(full = TRUE)
+    NHSRshiny::footer(full = TRUE)
   )
 
 
@@ -76,9 +76,9 @@ if (interactive()) {
     #Trigger error on blank submit of eventId2
     observeEvent(input$submit, {
       if (input$eventId2 != ""){
-        shinyGovstyle::error_off(inputId = "eventId2")
+        NHSRshiny::error_off(inputId = "eventId2")
       } else {
-        shinyGovstyle::error_on(
+        NHSRshiny::error_on(
           inputId = "eventId2",
           error_message = "Please complete")
       }

@@ -1,11 +1,11 @@
-#' Adds the content of www to shinyGovstyle/
+#' Adds the content of www to NHSRshiny/
 #'
 #' @importFrom shiny addResourcePath
 #'
 #' @noRd
 #'
 .onLoad <- function(...) {
-  shiny::addResourcePath('shinyGovstyle',
-                         system.file('www', package = 'shinyGovstyle')
+  shiny::addResourcePath('NHSRshiny',
+                         system.file('www', package = 'NHSRshiny')
   )
 }

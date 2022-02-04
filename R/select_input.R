@@ -11,11 +11,11 @@
 #' @examples
 #' if (interactive()) {
 #'   ui <- fluidPage(
-#'     shinyGovstyle::header(
+#'     NHSRshiny::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::gov_layout(size = "full",
+#'       logo="NHSRshiny/images/moj_logo.png"),
+#'     NHSRshiny::gov_layout(size = "full",
 #'       select_Input(
 #'         inputId = "sorter",
 #'         label = "Sort by",
@@ -26,7 +26,7 @@
 #'         select_value = c("published", "updated", "view", "comments")),
 #'         tags$br()
 #'     ),
-#'     shinyGovstyle::footer(full = TRUE)
+#'     NHSRshiny::footer(full = TRUE)
 #'   )
 #'
 #'   server <- function(input, output, session) {}

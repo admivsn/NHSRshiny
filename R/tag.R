@@ -11,14 +11,14 @@
 #' @examples
 #' if (interactive()) {
 #'   ui <- fluidPage(
-#'     shinyGovstyle::header(
+#'     NHSRshiny::header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
-#'     shinyGovstyle::gov_layout(size = "two-thirds",
-#'       shinyGovstyle::tag_Input("tag1", "COMPLETE"),
-#'       shinyGovstyle::tag_Input("tag2", "INCOMPLETE", "red")),
-#'     shinyGovstyle::footer(full = TRUE)
+#'       logo="NHSRshiny/images/moj_logo.png"),
+#'     NHSRshiny::gov_layout(size = "two-thirds",
+#'       NHSRshiny::tag_Input("tag1", "COMPLETE"),
+#'       NHSRshiny::tag_Input("tag2", "INCOMPLETE", "red")),
+#'     NHSRshiny::footer(full = TRUE)
 #'   )
 #'
 #'   server <- function(input, output, session) {}

@@ -39,13 +39,13 @@ if (interactive()) {
     "07700 900457 <br> sarah.phillips@example.com")
 
   ui <- fluidPage(
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::gov_summary("sumID", headers, info, action = FALSE)),
-    shinyGovstyle::footer(full = TRUE)
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::gov_layout(size = "two-thirds",
+      NHSRshiny::gov_summary("sumID", headers, info, action = FALSE)),
+    NHSRshiny::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}

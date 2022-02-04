@@ -23,17 +23,17 @@ This function create a gov style button
 \examples{
 if (interactive()) {
   ui <- fluidPage(
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::button_Input(
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::gov_layout(size = "two-thirds",
+      NHSRshiny::button_Input(
         inputId = "btn1",
         label = "Continue",
         type = "default")
     ),
-    shinyGovstyle::footer(full = TRUE)
+    NHSRshiny::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}

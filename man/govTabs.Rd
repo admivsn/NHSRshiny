@@ -34,13 +34,13 @@ if (interactive()) {
   data <- data.frame(tabs, Case_manager, Cases_open, Cases_closed)
 
   ui <- fluidPage(
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::govTabs(data, "tabs")),
-    shinyGovstyle::footer(full = TRUE)
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::gov_layout(size = "two-thirds",
+      NHSRshiny::govTabs(data, "tabs")),
+    NHSRshiny::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}

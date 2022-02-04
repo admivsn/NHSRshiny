@@ -1,8 +1,8 @@
-# shinyGovstyle <img src="man/figures/logo.png" align="right" height="139" style="padding-left: 1rem;" />
+# NHSRshiny <img src="man/figures/logo.png" align="right" height="139" style="padding-left: 1rem;" />
 
 <!-- badges: start -->
 
-[![CRAN status](https://www.r-pkg.org/badges/version/shinyGovstyle)](https://cran.r-project.org/package=shinyGovstyle)
+[![CRAN status](https://www.r-pkg.org/badges/version/NHSRshiny)](https://cran.r-project.org/package=NHSRshiny)
 
 <!-- badges: end -->
 
@@ -20,7 +20,7 @@ Top view details of gov.uk components please visit https://design-system.service
 
 Installation :
 ```r
-install.packages("shinyGovstyle")
+install.packages("NHSRshiny")
 ```
 
 This is also available on conda
@@ -30,7 +30,7 @@ conda install r-shinygovstyle
 
 If you want to make use or the development then
 ```r
-remotes::install_github("moj-analytical-services/shinyGovstyle")
+remotes::install_github("moj-analytical-services/NHSRshiny")
 ```
 
 To use error and word count elements you will need to load useShinyjs from shinyjs in the ui:
@@ -74,7 +74,7 @@ Create a gov style look to the page with a header, footer, font and layout: <br>
 ```r
 ui <- fluidPage(
   #font(),
-  shinyGovstyle::header("Justice", "Prototype", logo="shinyGovstyle/images/moj_logo.png"),
+  NHSRshiny::header("Justice", "Prototype", logo="NHSRshiny/images/moj_logo.png"),
   gov_layout(size = "full",
         tags$br(),
         tags$br(),
@@ -96,7 +96,7 @@ Add a banner to the header to state in beta or alpha : <br>
 
 ```r
 ui <- fluidPage(
-  shinyGovstyle::header("Justice", "Prototype", logo="shinyGovstyle/images/moj_logo.png"),
+  NHSRshiny::header("Justice", "Prototype", logo="NHSRshiny/images/moj_logo.png"),
   banner("banner", "beta", 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'),
   gov_layout(size = "full",
         tags$br(),
@@ -145,10 +145,10 @@ Gov style button with different styles :
 ![button](man/figures/buttons.png)
 
 ```r
-shinyGovstyle::button_Input(inputId = "btn1", label = "default"),
-shinyGovstyle::button_Input(inputId = "btn1", label = "start", type = "start"),
-shinyGovstyle::button_Input(inputId = "btn1", label = "secondary", type = "secondary"),
-shinyGovstyle::button_Input(inputId = "btn1", label = "warning", type = "warning")
+NHSRshiny::button_Input(inputId = "btn1", label = "default"),
+NHSRshiny::button_Input(inputId = "btn1", label = "start", type = "start"),
+NHSRshiny::button_Input(inputId = "btn1", label = "secondary", type = "secondary"),
+NHSRshiny::button_Input(inputId = "btn1", label = "warning", type = "warning")
 ```
 
 ### Select
@@ -157,7 +157,7 @@ Gov style drop down select  :
 ![select](man/figures/select.png)
 
 ```r
-shinyGovstyle::select_Input(
+NHSRshiny::select_Input(
   inputId = "sorter", 
   label = "Sort by",
   select_text = c("Recently published", "Recently updated", "Most views", "Most comments"),
@@ -215,7 +215,7 @@ You can also add a word count to the options, which requires an addition argumen
 ```r
 ui <- fluidPage(
   shinyjs::useShinyjs(),
-  shinyGovstyle::header("Justice", "", logo="shinyGovstyle/images/moj_logo.png"),
+  NHSRshiny::header("Justice", "", logo="NHSRshiny/images/moj_logo.png"),
   gov_layout(size = "full",
         text_area_Input(
           inputId = "text_area",
@@ -328,7 +328,7 @@ Bikes <- c("£85", "£75", "£165")
 Cars <- c("£95", "£55", "£125")
 example_data <- data.frame(Months, Bikes, Cars)
 
-shinyGovstyle::govTable(
+NHSRshiny::govTable(
       "tab1", example_data, "Test", "l", num_col = c(2,3),
       width_overwrite = c("one-half", "one-quarter", "one-quarter"))
 ```
@@ -350,13 +350,13 @@ Gov style tabs component :
   data <- data.frame(tabs, Case_manager, Cases_open, Cases_closed)
 
   ui <- fluidPage(
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::govTabs("tabsID", data, "tabs")),
-    shinyGovstyle::footer(full = TRUE)
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::gov_layout(size = "two-thirds",
+      NHSRshiny::govTabs("tabsID", data, "tabs")),
+    NHSRshiny::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}
@@ -378,13 +378,13 @@ Gov style summary list :
     "07700 900457 <br> sarah.phillips@example.com")
 
   ui <- fluidPage(
-    shinyGovstyle::header(
+    NHSRshiny::header(
       main_text = "Example",
       secondary_text = "User Examples",
-      logo="shinyGovstyle/images/moj_logo.png"),
-    shinyGovstyle::gov_layout(size = "two-thirds",
-      shinyGovstyle::gov_summary("sumID", headers, info, action = TRUE)),
-    shinyGovstyle::footer(full = TRUE)
+      logo="NHSRshiny/images/moj_logo.png"),
+    NHSRshiny::gov_layout(size = "two-thirds",
+      NHSRshiny::gov_summary("sumID", headers, info, action = TRUE)),
+    NHSRshiny::footer(full = TRUE)
   )
 
   server <- function(input, output, session) {}
@@ -398,15 +398,15 @@ Gov style cookie banner :
 
 ```r
 ui <- fluidPage(
-  shinyGovstyle::header(
+  NHSRshiny::header(
     main_text = "Example",
     secondary_text = "User Examples",
-    logo="shinyGovstyle/images/moj_logo.png"),
+    logo="NHSRshiny/images/moj_logo.png"),
   #Needs shinyjs to work
   shinyjs::useShinyjs(),
-  shinyGovstyle::cookieBanner("The best thing"),
-  shinyGovstyle::gov_layout(size = "two-thirds"),
-  shinyGovstyle::footer(full = TRUE)
+  NHSRshiny::cookieBanner("The best thing"),
+  NHSRshiny::gov_layout(size = "two-thirds"),
+  NHSRshiny::footer(full = TRUE)
 )
 
 server <- function(input, output, session) {
@@ -445,8 +445,8 @@ Add a gov style tag component :
 ![tags](man/figures/tags.png)
 
 ```r
-shinyGovstyle::tag_Input("tag1", "COMPLETE"),
-shinyGovstyle::tag_Input("tag2", "INCOMPLETE", "red")
+NHSRshiny::tag_Input("tag1", "COMPLETE"),
+NHSRshiny::tag_Input("tag2", "INCOMPLETE", "red")
 ```
 
 ### Error
@@ -457,7 +457,7 @@ Add errors to components when not filled in correctly.  Most components have an 
 ```r
 ui <- fluidPage(
   shinyjs::useShinyjs(),
-  shinyGovstyle::header("Justice", "", logo="shinyGovstyle/images/moj_logo.png"),
+  NHSRshiny::header("Justice", "", logo="NHSRshiny/images/moj_logo.png"),
   gov_layout(size = "full",
         text_area_Input(
           "text_area",

@@ -11,7 +11,7 @@
 #'     header(
 #'       main_text = "Example",
 #'       secondary_text = "User Examples",
-#'       logo="shinyGovstyle/images/moj_logo.png"),
+#'       logo="NHSRshiny/images/moj_logo.png"),
 #'     shiny::navlistPanel(
 #'       "",
 #'       id="nav",
@@ -29,7 +29,7 @@
 #'        shiny::tabPanel(
 #'          "Tab2",
 #'          value = "panel2")),
-#'    shinyGovstyle::footer(full = TRUE)
+#'    NHSRshiny::footer(full = TRUE)
 #'   )
 #'
 #'   server <- function(input, output, session) {
